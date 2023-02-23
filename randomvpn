@@ -9,7 +9,7 @@ import subprocess
 import time
 
 config_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config')
-config_files = [os.path.join(config_dir, f'config{i}') for i in range(1, 36)]
+config_files = [os.path.join(config_dir, f'config{i}') for i in range(1, 45)]
 used_configs = []
 timeout = 30
 exit_code = 1
