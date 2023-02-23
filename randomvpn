@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# must be run as root
+# must be run as root/admin user
 
 import random
 import subprocess
@@ -8,9 +8,7 @@ import time
 import os
 
 config_dir = "/vpn/config"
-config_files = ["indonesia", "japan", "japan1", "japan2", "japan3",
-                "korea", "korea1", "korea2", "korea3", "korea4", "korea5", "korea6", "korea7", "korea8", 
-                "ukraine", "usa"]
+config_files = [f"{config_dir}/config{i}.ovpn" for i in range(1, 21)]
 used_configs = []
 timeout = 30
 exit_code = 1
@@ -18,14 +16,14 @@ exit_code = 1
 while len(used_configs) < len(config_files):
     config_file = random.choice(list(set(config_files) - set(used_configs)))
     used_configs.append(config_file)
-    print(f"Trying {config_file}...")
+    print("Trying {}...".format(config_file))
     proc = subprocess.Popen(["openvpn", "--config", config_file])
     time.sleep(timeout)
     if proc.poll() is None:
-        os.system(f"pkill -f {config_file}")
-        print(f"Connection to {config_file} failed.")
+        os.system("pkill -f {}".format(config_file))
+        print("Connection to {} failed.".format(config_file))
     else:
-        print(f"Connected to {config_file}!")
+        print("Connected to {}!".format(config_file))
         exit_code = 0
         break
 
