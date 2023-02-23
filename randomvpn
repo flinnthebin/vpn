@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+
+import random
+import subprocess
+import time
+import os
+
+config_files = ["korea", "korea1", "korea2", "ukraine", "usa"]
+used_configs = []
+timeout = 30
+exit_code = 1
+
+while len(used_configs) < len(config_files):
+    config_file = random.choice(list(set(config_files) - set(used_configs)))
+    used_configs.append(config_file)
+    print(f"Trying {config_file}...")
+    proc = subprocess.Popen(["openvpn", "--config", config_file])
+    time.sleep(timeout)
+    if proc.poll() is None:
+        os.system(f"pkill -f {config_file}")
+        print(f"Connection to {config_file} failed.")
+    else:
+        print(f"Connected to {config_file}!")
+        exit_code = 0
+        break
+
+exit(exit_code)
