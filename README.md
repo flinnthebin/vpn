@@ -9,7 +9,7 @@ a simple script for connecting to publicly available vpns
 
 ## linux usage
 
-```git clone https://github.com/flinnthebin/vpn\n```
+```git clone https://github.com/flinnthebin/vpn```
 ```chmod 755 randomvpn```
 ```sudo ./randomvpn```
 
