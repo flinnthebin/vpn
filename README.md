@@ -1,4 +1,4 @@
-# vpn
+# randomvpn
 
 a simple script for connecting to publicly available vpns
 
@@ -7,14 +7,15 @@ a simple script for connecting to publicly available vpns
 - openvpn
 - python3
 
-## linux usage
+## macOS/linux
 
 ```git clone https://github.com/flinnthebin/vpn```   
 ```chmod 755 randomvpn```   
 ```sudo ./randomvpn```   
 
-## windows usage
+## windows
 
-download openvpn   
+```git clone https://github.com/flinnthebin/vpn```   
+download openvpn - https://openvpn.net/client-connect-vpn-for-windows/
 run powershell as administrator   
 ```python3 randomvpn```   
