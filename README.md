@@ -15,7 +15,10 @@ a simple script for connecting to publicly available vpns
 
 ## windows
 
-```git clone https://github.com/flinnthebin/vpn```   
 download openvpn - https://openvpn.net/client-connect-vpn-for-windows/
+
+```git clone https://github.com/flinnthebin/vpn```   
+
 run powershell as administrator   
+
 ```python3 randomvpn```   
