@@ -2,13 +2,14 @@
 
 # must be run as root/admin user
 
+import os
 import random
+import re
 import subprocess
 import time
-import os
 
-config_dir = "/vpn/config"
-config_files = [f"{config_dir}/config{i}.ovpn" for i in range(1, 21)]
+config_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config')
+config_files = [os.path.join(config_dir, f'config{i}') for i in range(1, 36)]
 used_configs = []
 timeout = 30
 exit_code = 1
@@ -16,14 +17,18 @@ exit_code = 1
 while len(used_configs) < len(config_files):
     config_file = random.choice(list(set(config_files) - set(used_configs)))
     used_configs.append(config_file)
-    print("Trying {}...".format(config_file))
+    with open(config_file, 'r') as f:
+        content = f.read()
+        match = re.search(r'#\s*(\w+)', content)
+        location = match.group(1) if match else config_file
+    print(f"Trying {location}...")
     proc = subprocess.Popen(["openvpn", "--config", config_file])
     time.sleep(timeout)
     if proc.poll() is None:
-        os.system("pkill -f {}".format(config_file))
-        print("Connection to {} failed.".format(config_file))
+        os.system(f"pkill -f {config_file}")
+        print(f"Connection to {location} failed.")
     else:
-        print("Connected to {}!".format(config_file))
+        print(f"Connected to {location}!")
         exit_code = 0
         break
 
