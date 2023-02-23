@@ -17,4 +17,4 @@ a simple script for connecting to publicly available vpns
 
 - download openvpn
 - run powershell as administrator
-- python3 randomvpn
+- ```python3 randomvpn```
