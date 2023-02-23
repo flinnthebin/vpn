@@ -7,6 +7,6 @@ a simple script for connecting to publicly available vpns
 openvpn
 python3
 
-### notes
+## notes
 
 script must be run as root user/administrator
