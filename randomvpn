@@ -1,11 +1,16 @@
 #!/usr/bin/python3
 
+# must be run as root
+
 import random
 import subprocess
 import time
 import os
 
-config_files = ["korea", "korea1", "korea2", "ukraine", "usa"]
+config_dir = "/vpn/config"
+config_files = ["indonesia", "japan", "japan1", "japan2", "japan3",
+                "korea", "korea1", "korea2", "korea3", "korea4", "korea5", "korea6", "korea7", "korea8", 
+                "ukraine", "usa"]
 used_configs = []
 timeout = 30
 exit_code = 1
