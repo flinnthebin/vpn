@@ -7,6 +7,6 @@ a simple script for connecting to publicly available vpns
 - openvpn
 - python3
 
-## notes
+## usage
 
-script must be run as root user/administrator
+```git clone https://github.com/flinnthebin/vpn```
