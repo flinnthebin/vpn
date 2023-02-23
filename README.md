@@ -4,8 +4,8 @@ a simple script for connecting to publicly available vpns
 
 ## requirements
 
-openvpn
-python3
+- openvpn
+- python3
 
 ## notes
 
