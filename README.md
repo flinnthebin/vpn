@@ -1,7 +1,16 @@
 # randomvpn
 
-a simple script for connecting to publicly available vpns
+connect to a random public vpn
+location data is contained on line 1 of each config file
+to connect to a specific vpn, change this code on line 12 from this:
 
+```for i in range(1, 45)```
+
+to this:
+
+```for i in range(<num>, <num>)```
+
+delete
 ## requirements
 
 - openvpn
