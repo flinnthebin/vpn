@@ -29,7 +29,3 @@ run powershell as administrator
 
 ```git clone https://github.com/flinnthebin/vpn```   
 ```python3 randomvpn```   
-
-## deprecation
-
-config files will be replaced every ~30 days
