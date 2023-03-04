@@ -14,7 +14,6 @@ to this:
 for i in range(<num>, <num>)
 ```
 
-delete
 ## requirements
 
 - openvpn
