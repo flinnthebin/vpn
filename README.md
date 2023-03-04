@@ -22,6 +22,7 @@ for i in range(<num>, <num>)
 ## macOS/linux
 
 ```bash
+sudo apt install openvpn
 git clone https://github.com/flinnthebin/vpn
 chmod 755 randomvpn
 sudo ./randomvpn
