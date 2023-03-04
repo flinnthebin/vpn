@@ -24,11 +24,7 @@ delete
 
 ```bash
 git clone https://github.com/flinnthebin/vpn
-```   
-```bash
 chmod 755 randomvpn
-```   
-```bash
 sudo ./randomvpn
 ```   
 
@@ -38,8 +34,6 @@ download openvpn - https://openvpn.net/client-connect-vpn-for-windows/
 run powershell as administrator
 
 ```bash
-git clone https://github.com/flinnthebin/vpn
-```   
-```bash
+git clone https://github.com/flinnthebin/vpn 
 python3 randomvpn
 ```   
