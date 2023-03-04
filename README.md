@@ -30,7 +30,7 @@ sudo ./randomvpn
 
 ## windows
 
-download openvpn - https://openvpn.net/client-connect-vpn-for-windows/
+download openvpn - https://openvpn.net/client-connect-vpn-for-windows/     
 run powershell as administrator
 
 ```bash
