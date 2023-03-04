@@ -4,11 +4,15 @@ connect to a random public vpn
 location data is contained on line 1 of each config file
 to connect to a specific vpn, change this code on line 12 from this:
 
-```for i in range(1, 45)```
+```python
+for i in range(1, 45)
+```
 
 to this:
 
-```for i in range(<num>, <num>)```
+```python
+for i in range(<num>, <num>)
+```
 
 delete
 ## requirements
@@ -18,14 +22,24 @@ delete
 
 ## macOS/linux
 
-```git clone https://github.com/flinnthebin/vpn```   
-```chmod 755 randomvpn```   
-```sudo ./randomvpn```   
+```bash
+git clone https://github.com/flinnthebin/vpn
+```   
+```bash
+chmod 755 randomvpn
+```   
+```bash
+sudo ./randomvpn
+```   
 
 ## windows
 
 download openvpn - https://openvpn.net/client-connect-vpn-for-windows/
 run powershell as administrator
 
-```git clone https://github.com/flinnthebin/vpn```   
-```python3 randomvpn```   
+```bash
+git clone https://github.com/flinnthebin/vpn
+```   
+```bash
+python3 randomvpn
+```   
