@@ -7,6 +7,7 @@ import random
 import re
 import subprocess
 import time
+import webbrowser
 
 config_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config')
 config_files = [os.path.join(config_dir, f'config{i}') for i in range(1, 45)]
@@ -30,6 +31,9 @@ while len(used_configs) < len(config_files):
     else:
         print(f"Connected to {location}!")
         exit_code = 0
+
+        # Open Firefox browser with the specified URL
+        webbrowser.get("firefox").open("http://www.website.com")
         break
 
 exit(exit_code)
